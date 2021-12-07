@@ -1,0 +1,49 @@
+GET http://localhost:3000/api/v1/users/
+
+###
+POST http://localhost:3000/api/v1/users/register
+Content-Type: application/json
+
+{
+    "username":"bachelor",
+    "email":"bachelor2.com",
+    "password":"12345678"
+}
+###
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "username":"bachelor",
+    "password":"12345678"
+}
+
+###
+PATCH http://localhost:3000/api/v1/users/msdhoni
+Content-Type: application/json
+
+{
+    "password":"12345678",
+    "email":"msd2@12.com"
+}
+
+###
+DELETE http://localhost:3000/api/v1/users/msdhoni
+Content-Type: application/json
+
+{
+    "password":"12345678"
+}
+
+###
+POST http://localhost:3000/api/v1/posts/add
+Content-Type: application/json
+Authorization: Bearer {{"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhY2hlbG9yIiwiaWF0IjoxNjM3MTYzNTQ0LCJleHAiOjE2MzcxNjcxNDR9.Y4SfnlV0K3WfFBKuztb-3fC80YMA_2OWa2uL6IV4GSg"}}
+{
+    "title":"Sachin",
+    "author":"Me"
+}
+
+###
+GET http://localhost:3000/api/v1/posts/get
+Content-Type: application/json
